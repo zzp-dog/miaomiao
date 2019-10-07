@@ -1,13 +1,11 @@
-import Router from 'vue-router';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
 @Component({
+    name: 'comming-soon'
 })
-export default class AppFooterComponent extends Vue {
-
+export default class CommingSoonComponent extends Vue {
     constructor() {
         super();
     }
-
 }

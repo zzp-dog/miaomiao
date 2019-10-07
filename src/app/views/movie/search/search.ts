@@ -1,13 +1,11 @@
-import Router from 'vue-router';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
 @Component({
+    name: 'search'
 })
-export default class AppFooterComponent extends Vue {
-
+export default class SearchComponent extends Vue {
     constructor() {
         super();
     }
-
 }
