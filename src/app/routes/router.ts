@@ -12,6 +12,11 @@ export default new Router({
   routes: [
     MovieRoute,
     CinemaRoute,
-    MineRoute
+    MineRoute,
+    {
+      // 其他路径重定向到电影首页
+      path: '/*',
+      redirect: '/movie/now-playing'
+    }
   ],
 });

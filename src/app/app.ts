@@ -10,18 +10,11 @@ import Component from 'vue-class-component';
         AppFooterComponent
     }
 })
+// 必须是export default，编译过程中没有解构
 export default class AppComonent extends Vue {
     /** 头部标题 */
     public title: string | null = '喵喵影院';
     constructor() {
         super();
-    }
-    /**
-     * 事件发射回调
-     * @param $event title
-     */
-    public changeTitle($event: string): void {
-        console.log(this.title);
-        this.title = $event;
     }
 }
