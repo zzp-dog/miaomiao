@@ -14,88 +14,19 @@
         </div>
         <div class="cinema_body">
             <ul>
-                <li>
+                <li v-for="cinema in cinemas" :key="cinema.id">
                     <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
+                        <span>{{cinema.nm}}</span>
+                        <span class="q"><span class="price">{{cinema.sellPrice}}</span> 元起</span>
                     </div>
                     <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
+                        <span>{{cinema.addr}}</span>
+                        <span>{{cinema.distance}}</span>
                     </div>
                     <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>大地影院(澳东世纪店)</span>
-                        <span class="q"><span class="price">22.9</span> 元起</span>
-                    </div>
-                    <div class="address">
-                        <span>金州区大连经济技术开发区澳东世纪3层</span>
-                        <span>1763.5km</span>
-                    </div>
-                    <div class="card">
-                        <div>小吃</div>
-                        <div>折扣卡</div>
+                        <template v-for="(value, key) in cinema.tag">
+                            <div v-if="value === 1" :key="key" :class="key | setTagStyle">{{map[key]}}</div>
+                        </template>
                     </div>
                 </li>
             </ul>

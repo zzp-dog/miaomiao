@@ -20,6 +20,9 @@
     "semicolon": false,
     "no-console":false,
     "ban-types": false,
-    "object-literal-key-quotes": false
+    "object-literal-key-quotes": false,
+    "no-var-requires":false,
+    "no-empty": false,
+    "array-type":false
   }
 }

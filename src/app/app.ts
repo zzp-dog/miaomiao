@@ -1,5 +1,5 @@
-import AppHeaderComponent from './components/app-layout/app-header/app-header';
-import AppFooterComponent from './components/app-layout/app-footer/app-footer';
+import AppHeaderComponent from './shared/components/app-layout/app-header/app-header';
+import AppFooterComponent from './shared/components/app-layout/app-footer/app-footer';
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
