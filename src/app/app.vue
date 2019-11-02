@@ -4,7 +4,7 @@
     <!-- 也可以写成app-header-component形式，最后都会变成下面这种 -->
     <AppHeaderComponent/>
     <keep-alive>
-      <router-view/>
+      <router-view ref="main"/>
     </keep-alive>
     <AppFooterComponent />
   </div> 
