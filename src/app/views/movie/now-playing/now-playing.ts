@@ -1,7 +1,7 @@
+import BaseComponent from 'bigbigbird/@vue/@component/base-component';
 import Vue from 'vue';
 import { NowPlayingMovie } from './../service/movie-model';
 import Component from 'vue-class-component';
-import { Autowired } from 'bigbigbird';
 import MovieService from '../service/movie-service';
 import {setImgSize} from '@/app/shared/filters/set-img-size';
 
@@ -11,30 +11,45 @@ import {setImgSize} from '@/app/shared/filters/set-img-size';
         setImgSize
     }
 })
-export default class NowPlayingComponent extends Vue {
+export default class NowPlayingComponent extends BaseComponent {
 
     /** 正在热映电影 */
     public movies: NowPlayingMovie[] = [];
 
-    /** 3d max 小图标 */
-    // public max3d: string = '';
+    public loading: boolean = true;
 
-    /** 服务实列 */
-    @Autowired({name: 'service', token: MovieService})
-    private service!: MovieService;
+    /** 设想当前的城市id */
+    private id: number = -1;
+
 
     constructor() {
         super();
     }
 
+
     /**
-     * 挂载后获取正在上映列表
+     * keep-alive生命周期钩子函数，每次进入都会执行
      */
-    public mounted(): void {
-        // console.log(this.service)
-        this.service.getMovieOnInfoList({cityId: 10}).then((res: any) => {
+    public activated(): void {
+        const cityId = this.$store.state.city.id;
+        if (cityId === this.id) { // id未改变，退出不发请求
+            return;
+        }
+        this.id = cityId;
+        this.getMovieOnInfoList();
+    }
+
+    /**
+     * 获取电影列表
+     */
+    public getMovieOnInfoList() {
+        return MovieService.getMovieOnInfoList({cityId: this.id}).then((res: any) => {
             if (res.data.msg === 'ok') {
                 this.movies = res.data.data.movieList;
+                this.loading = false;
+                return true;
+            } else {
+                return false;
             }
         });
     }

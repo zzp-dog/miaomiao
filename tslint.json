@@ -23,6 +23,8 @@
     "object-literal-key-quotes": false,
     "no-var-requires":false,
     "no-empty": false,
-    "array-type":false
+    "array-type":false,
+    "member-ordering":false,
+    "jsdoc-format": false
   }
 }

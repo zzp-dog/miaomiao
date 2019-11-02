@@ -1,14 +1,20 @@
+@charset 'utf-8';
+@import '@/assets/sass/mixins.scss';
 .city_body {
+    @include flex();
+    @include flex-1();
     margin-top: 45px;
-    display: flex;
     width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
+    overflow: auto;
 }
-
+.city_body .city_content {
+    width: 90%;
+}
 .city_body .city_list {
-    flex: 1;
+    @include flex-1();
     overflow: auto;
     background: #FFF5F0;
 }
@@ -68,10 +74,14 @@
 }
 
 .city_body .city_index {
-    width: 20px;
-    display: flex;
+    position: fixed;
+    top:95px;
+    right:0px;
+    bottom:50px;
+    width: 10%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     border-left: 1px #e6e6e6 solid;
+    overflow: auto;
 }

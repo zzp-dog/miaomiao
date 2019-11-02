@@ -1,4 +1,5 @@
-export const MovieRoute: any = {
+
+const MovieRoute: any = {
     path: '/movie',
     name: 'movie',
     redirect: '/movie/now-playing',
@@ -30,5 +31,6 @@ export const MovieRoute: any = {
             component: () => import('@/app/views/movie/search/search.vue')
         }
     ]
-};
-
+}
+// require('../../views/movie/movie-module');
+export default MovieRoute;

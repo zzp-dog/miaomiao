@@ -17,30 +17,34 @@ img {
 html,
 body {
     height: 100%;
+    position: relative;
 }
+
 a {
     text-decoration: none;
 }
-a:link, a:active, a:visited, a:hover{
+
+a:link,
+a:active,
+a:visited,
+a:hover {
     color: black;
 }
+
 .clearfix:after {
     content: "";
     display: block;
     clear: both;
 }
 
-#main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+/** 参考ionic 解决时延300ms，不能解决点透问题 */
+div[tappable],
+span[tappable],
+ul[tappable],
+li[tappable] {
+    touch-action: manipulation;
+    -ms-touch-action: manipulation;
 }
-
-#content {
-    flex: 1;
-    overflow: auto;
-    margin-bottom: 50px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+[tappable] {
+    cursor: pointer
 }
