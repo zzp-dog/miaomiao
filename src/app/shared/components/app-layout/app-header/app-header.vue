@@ -1,6 +1,6 @@
 <template>
     <header id="header">
-        <h1>{{title}}</h1>
+        <slot><h1>{{title}}</h1></slot>
     </header>
 </template>
 <script lang="ts" src="./app-header.ts"></script>

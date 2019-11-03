@@ -15,8 +15,9 @@
         </div>
         <!-- 电影二级路由 -->
         <keep-alive>
-            <router-view></router-view>
+            <router-view name="default"></router-view>
         </keep-alive>
+        <router-view name="detail"></router-view>
     </div>
 </template>
 <script lang="ts" src="./index.ts"></script>

@@ -41,6 +41,16 @@ class MovieService extends BaseService {
         return this.http.get('/api/searchList', {params: data,
          cancelToken: new this.http.CancelToken((c) => { this.cancle = c })});
     }
+
+    /**
+     * 根据电影id获取影片详情
+     * @param data 电影id
+     * @returns {Promise}
+     */
+    public static getMovieDetailByMovieId(data: {movieId: number}): Promise<any> {
+        return this.http.get('/api/detailmovie', {params: data});
+    }
+
     constructor() {
         super();
     };
