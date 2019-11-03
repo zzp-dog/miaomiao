@@ -54,4 +54,12 @@ export default class NowPlayingComponent extends BaseComponent {
         });
     }
 
+    /**
+     * 去影片详情页
+     * @param id 电影id
+     */
+    public toDetailPage(id: number = 1) {
+        this.$router.push('/movie/detail/now-playing/' + id);
+    }
+
 }
