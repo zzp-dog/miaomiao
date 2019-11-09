@@ -40,7 +40,6 @@ export default class DetailComponent extends Vue {
         MovieService.getMovieDetailByMovieId({movieId: id}).then((res: any) => {
             if (res.data.msg === 'ok') {
                 this.detailMovie = res.data.data.detailMovie;
-                console.log(res.data.data);
             }
             this.isLoading = false;
         });

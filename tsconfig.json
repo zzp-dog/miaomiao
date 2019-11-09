@@ -31,7 +31,9 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx", "node_modules/bigbigbird/@vue/@component/app-service.ts"
+    "tests/**/*.tsx", 
+    "node_modules/@bigbigbird/vue/**/*.ts",
+    "node_modules/@bigbigbird/vue/**/*.vue",
   ],
   "exclude": [
     "node_modules"

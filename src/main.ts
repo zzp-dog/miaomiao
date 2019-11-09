@@ -6,9 +6,9 @@ import router from './app/routes/router';    // 根路由模块
 import store from './app/stores/store';      // 应用状态管理模块
 import Component from 'vue-class-component'; // 引入@Component装饰器
 import Router from 'vue-router';
-import tappable from 'bigbigbird/@vue/@directive/tappable';
+import tappable from '@bigbigbird/vue/directive/tappable';
 import LoadingComponent from './app/shared/components/commons/loading/loading';
-import ScrollerComponent from 'bigbigbird/@vue/@component/scroller/scroller';
+import ScrollerComponent from '@bigbigbird/vue/component/scroller/scroller';
 
 // 移动端300ms点击延迟（提示无attach方法，类型定义文件有问题，要修改一下）
 // import FastClick from 'fastclick';
@@ -44,7 +44,7 @@ new Vue({
 
 // 添加移动端eruda调试 - 也可在index.html直接引入外链eruda.js
 if (!Vue.config.productionTip) {
-  const eruda =  require('bigbigbird/@lib/debug/node_modules/eruda/eruda');
+  const eruda =  require('eruda/eruda');
   eruda.init();
 }
 

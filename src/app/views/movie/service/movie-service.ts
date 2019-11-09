@@ -1,5 +1,5 @@
-import {Injectable} from 'bigbigbird/@vue/@decrator/service';
-import BaseService from 'bigbigbird/@vue/@decrator/service/BaseDBService';
+import {Injectable} from '@bigbigbird/vue/decorator/service';
+import BaseService from '@bigbigbird/vue/decorator/service/BaseDBService';
 
 @Injectable()
 class MovieService extends BaseService {

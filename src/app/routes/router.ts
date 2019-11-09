@@ -8,7 +8,9 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
+  // 配置非开发环境在miaomiao文件夹下访问页面
+  base: 'miaomiao',
   routes: [
     MovieRoute,
     CinemaRoute,

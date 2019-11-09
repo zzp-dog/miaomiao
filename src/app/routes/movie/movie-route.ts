@@ -59,5 +59,5 @@ const MovieRoute: any = {
         }
     ]
 }
-// require('../../views/movie/movie-module');
+
 export default MovieRoute;

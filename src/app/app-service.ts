@@ -1,4 +1,4 @@
-import BaseService from 'bigbigbird/@vue/@decrator/service/BaseDBService';
+import BaseService from '@bigbigbird/vue/decorator/service/BaseDBService';
 /**
  * 全局服务类
  */

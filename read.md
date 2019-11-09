@@ -97,3 +97,7 @@ export default class AppHeaderComponent extends Vue {
     // 启用Axios和$http
     Vue.use(VueAxios, Axios);
     ```
+
+## othert
+
+npm 无响应 -> 处理方法，删除C:\Users\{账户}\下的.npmrc文件
