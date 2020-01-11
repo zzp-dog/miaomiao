@@ -39,7 +39,10 @@ export default class DetailComponent extends Vue {
         const id = parseInt(this.movieId, 10);
         MovieService.getMovieDetailByMovieId({movieId: id}).then((res: any) => {
             if (res.data.msg === 'ok') {
-                this.detailMovie = res.data.data.detailMovie;
+                const r = res.data.data.detailMovie;
+                if (r) {
+                    this.detailMovie = r;
+                }
             }
             this.isLoading = false;
         });

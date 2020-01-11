@@ -1,6 +1,6 @@
 // vue.config.js
 var {appConfig }= require('@bigbigbird/mock/app.config');
-var publicPath = '/miaomiao/';
+var publicPath = '/miaomiao';
 if (process.env.NODE_ENV === 'dev') { // 开发环境
     publicPath = '/';
 }

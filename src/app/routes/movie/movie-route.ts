@@ -16,7 +16,7 @@ const MovieRoute: any = {
             // 正在上映
             path: 'now-playing',
             name: 'now-playing',
-            component: () => import('@/app/views/movie/now-playing/now-playing.vue')
+            component: () => import('@/app/views/movie/now-playing/now-playing')
         },
         {
             // 正在上映详情

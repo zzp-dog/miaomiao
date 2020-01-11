@@ -24,7 +24,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@bigbigbird/mock": "^1.0.5",
+    "@bigbigbird/mock": "^1.0.7",
     "@types/better-scroll": "^1.12.1",
     "@types/fastclick": "^1.0.28",
     "@vue/cli-plugin-babel": "^3.11.0",

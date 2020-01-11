@@ -1,7 +1,7 @@
 
 
 import Vue, { CreateElement } from 'vue';
-import AppComonent from './app/app.vue';     // 根组件
+import AppComonent from './app/app';     // 根组件
 import router from './app/routes/router';    // 根路由模块
 import store from './app/stores/store';      // 应用状态管理模块
 import Component from 'vue-class-component'; // 引入@Component装饰器

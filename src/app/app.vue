@@ -10,4 +10,4 @@
   </div> 
 </template>
 <script lang="ts" src="./app.ts"></script>
-<style lang="scss" scoped src="./app.scss"></style
+<style lang="scss" scoped src="./app.scss"></style>

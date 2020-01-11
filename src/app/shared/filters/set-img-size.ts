@@ -4,5 +4,5 @@
  * @param size 图片尺寸 如 123.125，宽123px高125px
  */
 export function setImgSize(src: string, size: string) {
-    return src.replace('/w.h/', '/' + size + '/')
+    return src && src.replace('/w.h/', '/' + size + '/')
 }
