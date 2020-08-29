@@ -1,12 +1,12 @@
-import {Injectable} from '@bigbigbird/vue/decorator/service';
-import BaseService from '@bigbigbird/vue/decorator/service/BaseDBService';
+import {Injectable} from '@bigbigbird/vue/common/decorator/service';
+import BaseService from '@bigbigbird/vue/common/decorator/service/BaseDBService';
 
 @Injectable()
 class MovieService extends BaseService {
 
     public store!: string;
 
-    private static cancle: Function;
+    private static cancel: Function;
 
     /**
      * 获取城市
@@ -35,11 +35,11 @@ class MovieService extends BaseService {
      * @param data 城市id和关键字
      */
     public static getSearchList(data: {cityId: number, kw: string}): Promise<any> {
-        if (typeof this.cancle === 'function') {
-            this.cancle();
+        if (typeof this.cancel === 'function') {
+            this.cancel();
         }
         return this.http.get('/api/searchList', {params: data,
-         cancelToken: new this.http.CancelToken((c) => { this.cancle = c })});
+         cancelToken: new this.http.CancelToken((c) => { this.cancel = c })});
     }
 
     /**

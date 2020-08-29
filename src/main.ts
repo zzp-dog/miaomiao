@@ -1,14 +1,13 @@
 
 
-import Vue, { CreateElement } from 'vue';
+import Vue from 'vue';
 import AppComonent from './app/app';     // 根组件
 import router from './app/routes/router';    // 根路由模块
 import store from './app/stores/store';      // 应用状态管理模块
 import Component from 'vue-class-component'; // 引入@Component装饰器
-import Router from 'vue-router';
-import tappable from '@bigbigbird/vue/directive/tappable';
+import tappable from '@bigbigbird/vue/mb/directive/tappable';
 import LoadingComponent from './app/shared/components/commons/loading/loading';
-import ScrollerComponent from '@bigbigbird/vue/component/scroller/scroller';
+import ScrollerComponent from '@bigbigbird/vue/mb/component/scroller/scroller';
 
 // 移动端300ms点击延迟（提示无attach方法，类型定义文件有问题，要修改一下）
 // import FastClick from 'fastclick';

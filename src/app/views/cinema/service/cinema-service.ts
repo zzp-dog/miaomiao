@@ -1,5 +1,5 @@
-import {Injectable} from '@bigbigbird/vue/decorator/service';
-import BaseService from '@bigbigbird/vue/decorator/service/BaseDBService';
+import {Injectable} from '@bigbigbird/vue/common/decorator/service';
+import BaseService from '@bigbigbird/vue/common/decorator/service/BaseDBService';
 @Injectable()
 export default class CinemaService extends BaseService {
 

@@ -1,4 +1,4 @@
-import BaseComponent from '@bigbigbird/vue/component/base-component';
+import BaseComponent from '@bigbigbird/vue/mb/component/base-component';
 import { NowPlayingMovie } from './../service/movie-model';
 import Component from 'vue-class-component';
 import MovieService from '../service/movie-service';

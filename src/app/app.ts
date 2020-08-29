@@ -1,5 +1,5 @@
 import LocalStorage from '@/app/shared/db/LocalStorage';
-import BaseComponent from '@bigbigbird/vue/component/base-component';
+import BaseComponent from '@bigbigbird/vue/mb/component/base-component';
 import AppHeaderComponent from './shared/components/app-layout/app-header/app-header';
 import AppFooterComponent from './shared/components/app-layout/app-footer/app-footer';
 import Component from 'vue-class-component';
